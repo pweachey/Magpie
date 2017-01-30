@@ -21,7 +21,6 @@ public class Magpie2 {
 	public String getGreeting() {
 		return "Hello, let's talk.";
 	}
-
 	/**
 	 * Gives a response to a user statement
 	 * 
@@ -31,13 +30,42 @@ public class Magpie2 {
 	 */
 	public String getResponse(String statement) {
 		String response = "";
-		if (statement.indexOf("no") >= 0) {
-			response = "Why so negative?";
-		} else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
+		if (statement.indexOf("Yes") >= 0) {
+			response = "Why so happy?";
+		} else if (statement.indexOf("Mother") >= 0
+				|| statement.indexOf("Father") >= 0
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0) {
-			response = "Tell me more about your family.";
+			response = "Tell me more about your faimly.";
+		} else {
+			response = getRandomResponse();
+		}
+		return response;
+	}
+	
+	public String getResponse2(String statement) {
+		String response = "";
+		if (statement.indexOf("No") >= 0) {
+			response = "Lets talk please?";
+		} else if (statement.indexOf("dog") >= 0
+				|| statement.indexOf("cat") >= 0)
+				 {
+			response = "Tell me more about your pets.";
+		} else {
+			response = getRandomResponse();
+		}
+		return response;
+	}
+	
+	
+	public String getResponse3(String statement) {
+		String response = "";
+		if (statement.indexOf("Hi") >= 0) {
+			response = "Whats up";
+		} else if (statement.indexOf("Hanging out") >= 0
+				|| statement.indexOf("Friend") >= 0)
+				 {
+			response = "What are their names?";
 		} else {
 			response = getRandomResponse();
 		}
@@ -56,13 +84,13 @@ public class Magpie2 {
 		String response = "";
 
 		if (whichResponse == 0) {
-			response = "Interesting, tell me more.";
+			response = "Nice.";
 		} else if (whichResponse == 1) {
-			response = "Hmmm.";
+			response = "Whats up.";
 		} else if (whichResponse == 2) {
-			response = "Do you really think so?";
+			response = "Why so happy";
 		} else if (whichResponse == 3) {
-			response = "You don't say.";
+			response = "Whats up";
 		}
 
 		return response;
