@@ -19,6 +19,11 @@ public class StringExplorer {
 		System.out.println("After toLowerCase(), sample = " + sample);
 
 		// Try other methods here:
+		
+		//add these line as said in book
+		int notFoundPsn = sample.indexOf("slow");
+		
+		System.out.println("sample.indexOf(\"slow\") = " + notFoundPsn);
 
 	}
 
